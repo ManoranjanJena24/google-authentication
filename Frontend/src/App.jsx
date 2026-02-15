@@ -5,15 +5,17 @@ import Dashboard from './Dashboard'
 import PageNotFound from './PageNotFound'
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
+const GoogleAuthWrapper = () => {
+  return (
+    <GoogleOAuthProvider clientId="981534546844-q8mnlkdu1lneukqncplc7titeq6ijr7j.apps.googleusercontent.com">
+      <GoogleLogin />
+    </GoogleOAuthProvider>
+  );
+};
+
 function App() {
 
-  const GoogleAuthWrapper = ()=>{
-    return (
-      <GoogleOAuthProvider clientId="981534546844-q8mnlkdu1lneukqncplc7titeq6ijr7j.apps.googleusercontent.com">
-        <GoogleLogin></GoogleLogin>
-      </GoogleOAuthProvider>
-    );
-  }
+  
  
 
   return (
